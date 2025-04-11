@@ -364,16 +364,19 @@ def acceptAppointment(request,id):
 
 
 
+@login_required(login_url='patientSignIn')
 def patientProfile(request):
     return render(request,'patientProfile.html')
 
 
 
 
+@login_required(login_url='patientSignIn')
 def patientHelpPage(request):
     return render(request,'patientHelpPage.html')
 
 
+@login_required(login_url='patientSignIn')
 def patientAppointmentList(request):
     return render(request,'patientAppointmentList.html')
 
@@ -451,3 +454,5 @@ def lookupBarcode(request):
 
         return JsonResponse(result)
 
+def index(request):
+    return render(request,'index.html')

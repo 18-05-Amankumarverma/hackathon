@@ -16,27 +16,32 @@
 
     <title>Healthcare</title>
     <style>
-        .middleBar,.rightSideBar {
+        .middleBar,
+        .rightSideBar {
             color: white;
         }
-        .middleBar h2{
-            text-align:center;
-            padding:20px 0px;
+
+        .middleBar h2 {
+            text-align: center;
+            padding: 20px 0px;
         }
-        #scanner-container{
-            max-width:639px;
-            margin:0px auto;
+
+        #scanner-container {
+            max-width: 639px;
+            margin: 0px auto;
         }
-        video{
+
+        video {
             height: 83%;
             width: 100%;
         }
+
         .profileContainer {
-    position: absolute;
-    bottom: -179px;
-    padding: 10px;
-    width: 100%;
-}
+            position: absolute;
+            bottom: -179px;
+            padding: 10px;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -65,7 +70,8 @@
                                         href="{% url 'patientAppointmentList'%}">Appointments</a></li>
                                 <li><img src="{% static 'img/profile-user (1).png' %}" alt=""><a
                                         href="{% url 'patientProfile' %}">Profile</a></li>
-                                <li><img src="{% static 'img/question.png' %}" alt=""><a href="{% url 'scanner'%}">Scan</a></li>
+                                <li><img src="{% static 'img/question.png' %}" alt=""><a
+                                        href="{% url 'scanner'%}">Scan</a></li>
                                 <li><img src="{% static 'img/question.png' %}" alt=""><a
                                         href="{% url 'patientHelpPage'%}">Help</a></li>
                             </ul>
@@ -98,13 +104,18 @@
             <div class="col-md-4" style="padding:0px;">
                 <div class="rightSideBarContainer">
                     <div class="rightSideBar">
-                        <h6>scanned medicine results</h6>
-                        {% if request.session.name %}
-                        <h6>{{request.session.name}}</h6>
-                        <h6>{{request.session.usage}}</h6>
-                        {% else %}
-                        <h6>not found</h6>
-                        {% endif %}       
+                        <div style="padding:10px;">
+                            <h4>Scanned medicine results</h4>
+                            {% if request.session.name %}
+                            <h6>Medicine Name : {{request.session.name}}</h6>
+                            <h6>Medicine Usage : {{request.session.usage}}</h6>
+                            <!-- <div style="padding:30px 0px;">
+                                <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" width="100%" style="border-radius:10px;">
+                            </div> -->
+                            {% else %}
+                            <h6>not found</h6>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>

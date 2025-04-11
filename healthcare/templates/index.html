@@ -1,0 +1,422 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Health Consultation</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
+    <style>
+        .footer {
+            background-color: #1a1a1a;
+            padding: 60px 20px;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons i {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #ccc;
+        }
+
+        .footer input[type="email"] {
+            background-color: #2a2a2a;
+            color: white;
+            border: none;
+        }
+
+        .footer .footer-logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo {
+            width: 24px;
+            height: 24px;
+            background-color: #0d6efd;
+            border-radius: 5px;
+        }
+        a{
+            text-decoration: none !important;
+            color:white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="landingPage">
+        <header class="header">
+            <nav>
+                <div class="logo" style="display:flex;">
+                    <img src="{% static 'img/aids.png'%}" alt="logo" height="50px" width="50px" />
+                    <h2 style="padding:0px 0px 0px 15px;color:white !important;">Medicure</h2>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'doctorPage' %}">For Doctor</a></li>
+                    <li><a href="{% url 'patientPage' %}">For Patient</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <button><a href="{% url 'patientPage' %}">Get Started</a></button>
+            </nav>
+        </header>
+        <div class="landingPageDetails" style="color: #fff; position: relative; height: 100%">
+            <div style="position: absolute; bottom: 27%; padding-left: 30px" class="landingPageHeadings">
+                <h5>
+                    <p>
+                        Consult too Ai doctors anytime <br />
+                        from any location
+                    </p>
+                </h5>
+                <h1>
+                    Expert health Consultaions <br />
+                    Anytime, Anywhere
+                </h1>
+                <span>
+                    <p>
+                        Access top-tier health consultations from the comfort of your home
+                        or on the go , our <br />
+                        platform conneectsyou with experienced medical professionals
+                        around the clock
+                    </p>
+                    <button>Start Video</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section-one-m" style="margin:40px 0px;">
+        <div class="row">
+            <div class="col-md-5 section-one-l">
+                <div style="padding:50px;">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*"
+                        alt="not-found" height='100%' width='90%' style="border-radius:10px;" id="slider">
+
+                </div>
+            </div>
+            <div class="col-md-7 section-one-r">
+                <div style="padding:50px 20px;">
+                    <div>
+                        <span
+                            style="margin:10px 0px;border-radius:25px;padding:8px; background-color:rgba(166, 166, 176, 0.648);color:#3E61FF;">Our
+                            Specialist</span>
+                        <h1 style="padding:20px 0px 0px 0px;">Health Services for Your Well-being</h1>
+                        <p>we provide and extensive array of health services designed to cater your unique health needs
+                        </p>
+                    </div>
+                    <div style="display:flex;justify-content:center;align-items:center;gap:30px">
+                        <div>
+                            <h4 style="font-size:20px;font-weight:700;">General check ups and Physical Exams</h4>
+                            <p style="font-size:16px;text-align:justify;">Healthcare is the practice of maintaining or
+                                improving health through prevention, diagnosis, treatment, and rehabilitation. It
+                                encompasses various services, including preventative care, diagnostic services,
+                                treatment for illnesses, and long-term care</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size:20px;font-weight:700;">Chronic Disease Managment</h4>
+                            <p style="font-size:16px;text-align:justify;">Healthcare is the practice of maintaining or
+                                improving health through prevention, diagnosis, treatment, and rehabilitation. It
+                                encompasses various services, including preventative care, diagnostic services,
+                                treatment for illnesses, and long-term care</p>
+                        </div>
+                    </div>
+                    <button
+                        style="border-radius:8px;color:#fff;padding:5px;background-color: #184ba2 !important;height:45px;"><a
+                            href="">More Service</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section-one-m" style="margin:40px 0px;">
+        <div class="row">
+            <div class="col-md-12" style="text-align:center;margin:20px 0px;">
+                <div>
+                    <span
+                        style="margin:20px 0px;border-radius:25px;padding:8px 12px; background-color:rgba(166, 166, 176, 0.648);color:#3E61FF;">News
+                        and Tips</span>
+                    <h1 style="padding:25px 0px 0px 0px;">Latest Health News and Tips</h1>
+                    <p>Stay informed with the latest updates expert advice and practical tips to keep you healthy and
+                        well</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin:20px auto;justify-content:center;align-items:center;gap:35px;">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="imagecontainer">
+                        <img src="https://assets.gqindia.com/photos/61e9413280921e2614920381/16:9/w_2240,c_limit/top-image-01%20(35).jpg"
+                            alt="not-found" height="" style="border-radius:10px;" height="100%" width="100%">
+                    </div>
+                    <div>
+                        <ul style="padding:15px 0px;gap:13px;">
+                            <li
+                                style="border-radius:25px;padding:3px 10px ;background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Wellness</li>
+                            <li
+                                style="border-radius:25px;padding:3px 10px ; background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Nutrition</li>
+                            <li
+                                style="border-radius:25px;padding:3px 10px ;  background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Immunity</li>
+                        </ul>
+                        <h5>Boost Your Immunity with these Superfoods</h5>
+                        <p>Together we work to enhance health services,promote wellness inititives, and improve the
+                            overall well being of our community.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="imagecontainer">
+                        <img src="https://cdn.pixabay.com/photo/2023/09/11/14/19/weight-8246973_1280.jpg"
+                            alt="not-found" height="" style="border-radius:10px;" height="100%" width="100%">
+                    </div>
+                    <div>
+                        <ul style="padding:15px 0px;gap:13px;">
+                            <li
+                                style="border-radius:25px;padding:3px 10px ;background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Wellness</li>
+                            <li
+                                style="border-radius:25px;padding:3px 10px ; background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Nutrition</li>
+                            <li
+                                style="border-radius:25px;padding:3px 10px ;  background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Immunity</li>
+                        </ul>
+                        <h5>The Benefits of Regular Exercise for Mental Health</h5>
+                        <p>Discover to keep superfoods that can enhance your immune system and help you stay healthy
+                            year round</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="imagecontainer">
+                        <img src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-09/six-hours-of-sleep-zz-230927-5701a4.jpg"
+                            alt="not-found" height="" style="border-radius:10px;" height="100%" width="100%">
+                    </div>
+                    <div>
+                        <ul style="padding:15px 0px;gap:13px;">
+                            <li
+                                style="border-radius:25px;padding:3px 10px ;background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Wellness</li>
+                            <li
+                                style="border-radius:25px;padding:3px 10px ; background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Nutrition</li>
+                            <li
+                                style="border-radius:25px;padding:3px 10px ;  background-color:rgba(226, 226, 230, 0.242);color:#3E61FF;border:.8px solid rgb(177, 173, 173);">
+                                Immunity</li>
+                        </ul>
+                        <h5>Healthy sleep Habits: Tips for a Restful Night</h5>
+                        <p>Discover to keep superfoods that can enhance your immune system and help you stay healthy
+                            year round</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container"
+        style="padding:20px 20px;border-radius:10px;height:100%;width:100%;box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class=" col-md-12" style="text-align:center;margin:20px 0px;">
+                    <div>
+                        <span
+                            style="margin:20px 0px;border-radius:25px;padding:8px 12px; background-color:rgba(166, 166, 176, 0.648);color:#3E61FF;">Community</span>
+                        <h1 style="padding:25px 0px 0px 0px;">Latest Health News and Tips</h1>
+                        <p>Stay informed with the latest updates expert advice and practical tips to keep you healthy
+                            and
+                            well</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding:40px 0px;">
+                <div class="col-md-5 section-one-l">
+                    <div style="padding:20px;">
+                        <img src="https://prognocis.com/wp-content/uploads/2022/01/group-of-doctors-with-hands-together-at-hospital-1024x683.jpg.webp"
+                            alt="not-found" height='100%' width='90%' style="border-radius:10px;">
+
+                    </div>
+                </div>
+                <div class="col-md-7 section-one-r">
+                    <div style="padding:0px 20px;">
+                        <div>
+                            <h3 style="padding:20px 0px 0px 0px;font-weight:400;">
+                                Discover Our Collaborations
+                            </h3>
+                        </div>
+                        <div style="display:flex;justify-content:center;align-items:center;gap:30px">
+                            <div>
+                                <p style="font-size:17px;text-align:justify;font-weight:300;">Together we work to
+                                    enhance health services,promote wellness inititives, and improve the overall well
+                                    being of our community. Discover how these collaborations bring innovative solutions
+                                    and valuable resources to meet your health needs .</p>
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            style="border:.8px solid rgb(40, 71, 145) ;border-radius:20px;padding:5px;height:45px;"><a
+                                href="" style="color:#184ba2 !important;text-decoration:none;">Learn More</a></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="padding:40px 0px;">
+                <div class="col-md-7 section-one-r">
+                    <div style="padding:0px 20px;">
+                        <div>
+                            <h3 style="padding:20px 0px 0px 0px;font-weight:400;">Explore Our Initiatives
+                            </h3>
+                        </div>
+                        <div style="display:flex;justify-content:center;align-items:center;gap:30px">
+                            <div>
+                                <p style="font-size:17px;text-align:justify;font-weight:300;">Healthcare is the practice
+                                    From fitness and nutrition programs to mental health and chronic disease management,
+                                    we offer a variety of services to help you lead a healthier , happier life.</p>
+                            </div>
+                        </div>
+                        <button
+                            style="border:.8px solid rgb(40, 71, 145) ;border-radius:20px;padding:5px;height:45px;"><a
+                                href="" style="color:#184ba2 !important;text-decoration:none;">Learn More</a></button>
+                    </div>
+                </div>
+                <div class="col-md-5 section-one-l">
+                    <div style="padding:20px;">
+                        <img src="https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="not-found" height='100%' width='90%' style="border-radius:10px;">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="padding:40px 0px;">
+                <div class="col-md-5 section-one-l">
+                    <div style="padding:20px;">
+                        <img src="https://static.toiimg.com/thumb/msid-54383874,imgsize-112825,width-400,resizemode-4/54383874.jpg"
+                            alt="not-found" height='100%' width='90%' style="border-radius:10px;">
+
+                    </div>
+                </div>
+                <div class="col-md-7 section-one-r">
+                    <div style="padding:0px 20px;">
+                        <div>
+                            <h3 style="padding:20px 0px 0px 0px;font-weight:400;">Community Support Center</h3>
+                        </div>
+                        <div style="display:flex;justify-content:center;align-items:center;gap:30px">
+                            <div>
+                                <p style="font-size:17px;text-align:justify;font-weight:300;">Healthcare is the practice
+                                    Our center offers information on health services educational workshops support
+                                    groups and more . Wheather you need assistance navigating healthcare options or
+                                    shocking wellnesss advice. Our community Support center is here to help your every
+                                    step.</p>
+                            </div>
+                        </div>
+                        <button
+                            style="border:.8px solid rgb(40, 71, 145) ;border-radius:20px;padding:5px;height:45px;"><a
+                                href="" style="color:#184ba2 !important;text-decoration:none;">Learn More</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-footer"
+        style="padding: 30px;padding: 30px;position: absolute;width: 100%;margin-top: 78px;display: flex;justify-content: center;align-items: center;">
+        <div
+            style="background-color:#184ba2;border-radius:10px;padding:30px;color:white;width:94%;display:flex;align-items:center;gap:30px;justify-content:space-between;">
+            <div class="floating-footer-left">
+                <h1>Master your Wellness, Live Fully</h1>
+                <p>By cultivating healthy habits and embracing balance,you'll
+                    <br>
+                    Unlock your full potential and enjoy a life of vitality and purpose
+                </p>
+            </div>
+            <div class="floating-footer-right">
+                <button style="border-radius:10px;padding:5px;height:60px;background-color:white;"><a href=""
+                        style="color:#184ba2 !important;text-decoration:none;" href="{% url 'patientPage'}">Request for Demo</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer"
+        style="background-color: #282828;color:#fff;height:50vh;width:100%;margin-top:200px;">
+        <div class="row" style="padding-top:80px;">
+            <!-- Left Column -->
+            <div class="col-md-4">
+                <h4>Supporting Your Wellness Journey</h4>
+                <p class="text-secondary">
+                    Our comprehensive health resources, expert advice, and supportive community<br>
+                    are here to guide you every step of the way.
+                </p>
+                <form class="d-flex mt-3">
+                    <input type="email" class="form-control me-2" placeholder="Enter email address">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <!-- Center Column -->
+            <div class="col-md-4" style="text-align:center;">
+                <h5>About Heal Trust</h5>
+                <ul class="list-unstyled mt-3" style="display:flex;flex-direction:column;">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Right Column -->
+            <div class="col-md-4" style="text-align:center;">
+                <h5>For Employees</h5>
+                <ul class="list-unstyled mt-3" style="display:flex;flex-direction:column">
+                    <li><a href="#">For Doctor</a></li>
+                    <li><a href="#">For Patient</a></li>
+                    <li><a href="#">Teammate Health Portal</a></li>
+                    <li><a href="#">Employer Services</a></li>
+                    <li><a href="#">Employee Assistance</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

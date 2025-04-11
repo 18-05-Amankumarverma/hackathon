@@ -16,4 +16,5 @@ urlpatterns = [
     path('patientAppointmentList',views.patientAppointmentList,name='patientAppointmentList'),
     path('scanner/',views.scanner, name='scanner'),
     path('lookup',views.lookupBarcode, name='lookupBarcode'),
+    path('',views.index, name='index'),
 ]
